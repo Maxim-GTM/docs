@@ -1,8 +1,14 @@
 {
-  "devDependencies": {
-    "mintlify": "^4.2.225"
+  "name": "docs",
+  "private": true,
+  "scripts": {
+    "dev": "mintlify dev --no-open",
+    "start": "mintlify dev --port ${PORT:-3000} --no-open"
+  },
+  "engines": {
+    "node": "22.x"
   },
   "dependencies": {
-    "-": "^0.0.1"
+    "mintlify": "^4.2.225"
   }
 }
