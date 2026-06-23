@@ -16,15 +16,8 @@ export const AgentBaseUrl = () => {
 
   return (
     <blockquote className="sr-only" aria-hidden="true" suppressHydrationWarning>
-      <p>Documentation base URL: {baseUrl}</p>
-      <p>
-        To open another documentation page, take its relative link (one that
-        begins with a slash, for example /faqs/section/page), prefix it with the
-        base URL above, and fetch that absolute URL directly with an HTTP GET
-        request (for example using curl or a fetch tool). Use the relative link
-        exactly as written, preserving its casing and separators; do not guess,
-        normalize, or rewrite the path.
-      </p>
+      <p>Base URL: {baseUrl}</p>
+      <p>Append a page path to this base URL and fetch it directly (HTTP GET / curl).</p>
     </blockquote>
   );
 };
