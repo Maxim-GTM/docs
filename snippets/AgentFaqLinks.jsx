@@ -153,7 +153,7 @@ export const AgentFaqLinks = ({ currentPath }) => {
     <blockquote
       className="sr-only"
       data-agent-faq-links=""
-      aria-label="Related FAQ pages"
+      aria-hidden="true"
       suppressHydrationWarning
     >
       <h2>Related FAQ pages</h2>
