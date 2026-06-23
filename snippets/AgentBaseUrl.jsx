@@ -13,15 +13,17 @@ export const AgentBaseUrl = () => {
   const faqIndex = pathname.indexOf("/faqs/");
   const basePath = faqIndex >= 0 ? pathname.slice(0, faqIndex) : "";
   const baseUrl = origin ? `${origin}${basePath}` : "";
-  const pageUrl = origin && pathname ? `${origin}${pathname}` : "";
 
   return (
     <blockquote className="sr-only" aria-hidden="true" suppressHydrationWarning>
       <p>Documentation base URL: {baseUrl}</p>
-      <p>Canonical URL of this page: {pageUrl}</p>
       <p>
-        Relative links on this page resolve against the base URL. For example,
-        a link written as {pathname} refers to the full URL {pageUrl}.
+        To open another documentation page, take its relative link (one that
+        begins with a slash, for example /faqs/section/page), prefix it with the
+        base URL above, and fetch that absolute URL directly with an HTTP GET
+        request (for example using curl or a fetch tool). Use the relative link
+        exactly as written, preserving its casing and separators; do not guess,
+        normalize, or rewrite the path.
       </p>
     </blockquote>
   );
