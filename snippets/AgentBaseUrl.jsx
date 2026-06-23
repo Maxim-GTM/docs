@@ -17,7 +17,8 @@ export const AgentBaseUrl = () => {
   return (
     <blockquote className="sr-only" aria-hidden="true" suppressHydrationWarning>
       <p>Base URL: {baseUrl}</p>
-      <p>Form a page URL by appending its exact path to this base URL. Use the path exactly as written; do not guess or normalize the slug.</p>
+      <p>To read any documentation page in full, run this command with the page's exact path rather than a guessed one:</p>
+      <pre><code>{`curl -L ${baseUrl}/<page-path>`}</code></pre>
     </blockquote>
   );
 };
