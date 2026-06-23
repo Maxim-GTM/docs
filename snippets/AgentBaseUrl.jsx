@@ -17,7 +17,7 @@ export const AgentBaseUrl = () => {
   return (
     <blockquote className="sr-only" aria-hidden="true" suppressHydrationWarning>
       <p>Base URL: {baseUrl}</p>
-      <p>Append a page path to this base URL and fetch it directly (HTTP GET / curl).</p>
+      <p>All page paths are listed at {baseUrl}/sitemap.xml; fetch any path directly (HTTP GET / curl).</p>
     </blockquote>
   );
 };
