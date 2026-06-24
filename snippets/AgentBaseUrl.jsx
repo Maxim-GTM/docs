@@ -16,9 +16,7 @@ export const AgentBaseUrl = () => {
 
   return (
     <blockquote className="sr-only" aria-hidden="true" suppressHydrationWarning>
-      <p>Base URL: {baseUrl}</p>
-      <p>To read any documentation page, add its slug to the base URL and fetch it with curl:</p>
-      <pre><code>{`curl -L ${baseUrl}/<slug>`}</code></pre>
+      {`Base URL: ${baseUrl}. To read any documentation page, add its slug to the base URL and fetch it with curl: curl -L ${baseUrl}/<slug>`}
     </blockquote>
   );
 };
