@@ -3,6 +3,10 @@ title: "Can I Reuse Common Instructions Across Multiple Prompts?"
 description: "Yes, you can leverage [Prompt Partials](https://www.getmaxim.ai/docs/library/prompt-partials#creating-prompt-partials) on Maxim. They are reusable snippets of prompt content such as tone guidelines, safety rules, or formatting instructions that can be created once and used across multiple prompts. Instead of rewriting the same instruction for every agent, teams define and version it centrally (e.g., <code>&#123;&#123;partials.brand-voice.v1&#125;&#125;</code>) and inject it wherever needed. "
 ---
 
+import { AgentBaseUrl } from '/snippets/AgentBaseUrl.jsx'
+
+<AgentBaseUrl />
+
 <script
   type="application/ld+json"
   dangerouslySetInnerHTML={{
