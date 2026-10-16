@@ -28,19 +28,19 @@ import { AgentBaseUrl } from '/snippets/AgentBaseUrl.jsx'
 
 ## Experimentation & Rapid Iteration
 
-The [Prompt Playground](https://www.getmaxim.ai/docs/offline-evals/via-ui/prompts/prompt-playground) provides a dedicated environment for testing and refining prompts:
+The [Prompt Playground](https://www.getmaxim.ai/docs/prompt-engineering/prompt-playground) provides a dedicated environment for testing and refining prompts:
 
 - **Multi-model testing:** Experiment across open-source, closed, and custom models, adjusting parameters like temperature and max tokens
 - **Side-by-side comparison:** Compare up to five prompts or versions simultaneously, analyzing outputs, latency, cost, and token usage
-- **Tool and MCP integration:** Attach [tools](https://www.getmaxim.ai/docs/offline-evals/via-ui/prompts/tool-calls) (API, code, or schema) and connect [MCP servers](https://www.getmaxim.ai/docs/offline-evals/via-ui/prompts/mcp) to test agentic workflows
+- **Tool and MCP integration:** Attach [tools](https://www.getmaxim.ai/docs/offline-evals/via-ui/prompts/tool-calls) (API, code, or schema) and connect [MCP servers](https://www.getmaxim.ai/docs/prompt-engineering/mcp) to test agentic workflows
 - **RAG pipeline testing:** Connect your [retrieval pipeline](https://www.getmaxim.ai/docs/offline-evals/via-ui/prompts/retrieval) via Context Sources to test prompts with real retrieved context
-- **Session management:** [Save, tag, and recall](https://www.getmaxim.ai/docs/offline-evals/via-ui/prompts/prompt-sessions) full playground states, including variable values and conversation history, so you never lose an experiment
+- **Session management:** [Save, tag, and recall](https://www.getmaxim.ai/docs/prompt-engineering/prompt-sessions) full playground states, including variable values and conversation history, so you never lose an experiment
 
 ## Organization & Governance
 
 Treat prompts as managed assets with a centralized Prompt CMS:
 
-- **Prompt versioning:** Every change is tracked with author and timestamp. [Publish versions](https://www.getmaxim.ai/docs/offline-evals/via-ui/prompts/prompt-versions), view diffs between them, and roll back to a known-good state if needed
+- **Prompt versioning:** Every change is tracked with author and timestamp. [Publish versions](https://www.getmaxim.ai/docs/prompt-engineering/prompt-versions), view diffs between them, and roll back to a known-good state if needed
 - **Prompt Partials:** Create reusable snippets for recurring instructions (safety guidelines, output formats, etc.) and inject them using simple syntax like `{{partials.tone-and-structure.latest}}`. This ensures teams use standardized, approved language across prompts
 - **Folders and tags:** Organize prompts systematically as your library grows
 - **Role-based access control:** Control who can view, edit, or deploy prompts at the workspace level
@@ -59,7 +59,7 @@ Move beyond manual testing with systematic, data-driven evaluation:
 
 Close the loop from experimentation to production:
 
-- **AI-powered optimization:** Use Maxim's [prompt optimizer](https://www.getmaxim.ai/docs/offline-evals/via-ui/prompts/prompt-optimization) to automatically analyze test results and generate improved prompt versions with detailed reasoning for each change
+- **AI-powered optimization:** Use Maxim's [prompt optimizer](https://www.getmaxim.ai/docs/prompt-engineering/prompt-optimization) to automatically analyze test results and generate improved prompt versions with detailed reasoning for each change
 - **Decoupled deployment:** Deploy prompts directly from the UI with deployment variables, no code changes required. Product teams can push updates without waiting on engineering
 - **SDK integration:** Query prompts programmatically via the Maxim SDK to dynamically retrieve version-controlled prompts in production
 
