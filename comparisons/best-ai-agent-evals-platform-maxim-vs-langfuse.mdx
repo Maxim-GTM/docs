@@ -1,0 +1,199 @@
+---
+title: "Best AI Agent Evals Platform: Maxim vs Langfuse"
+description: "Maxim AI and Langfuse are both powerful AI agent evaluation platforms, but they serve different needs. Maxim AI is an end-to-end platform offering simulation, evaluation, and observability with strong cross-functional collaboration features. Langfuse is an open-source LLM engineering platform focused on tracing and observability. Choose Maxim AI for comprehensive agent testing, multi-turn simulations, and collaborative workflows across product and engineering teams. Choose Langfuse if you need an open-source solution with deep framework integrations and prefer self-hosting."
+---
+ 
+
+<a href="https://www.getmaxim.ai/demo" target="_blank" rel="noopener noreferrer">
+  <img
+    src="/images/Evaluation.png"
+    alt="Maxim vs Langfuse evaluation comparison"
+    style={{ borderRadius: '0.5rem', maxWidth: '100%', height: 'auto', margin: '1.5rem 0' }}
+  />
+</a>
+
+
+## Table of Contents
+
+1. [Platform Overview](#platform-overview)
+2. [Core Features Comparison](#core-features-comparison)
+3. [Agent Evaluation Capabilities](#agent-evaluation-capabilities)
+4. [Pricing Comparison](#pricing-comparison)
+5. [Integration & Framework Support](#integration-framework-support)
+6. [Use Cases & Best Fit](#use-cases-best-fit)
+7. [Final Verdict](#final-verdict)
+
+## Platform Overview
+
+### Maxim AI
+
+[Maxim AI](https://www.getmaxim.ai/) is an end-to-end AI simulation, evaluation, and observability platform designed to help teams ship AI agents reliably and 5x faster. The platform emphasizes cross-functional collaboration between engineering and product teams, offering a comprehensive toolkit that spans the entire AI application lifecycle from prompt engineering to production monitoring.
+
+**Key Strengths:**
+- Purpose-built for [agent simulation and evaluation](https://www.getmaxim.ai/products/agent-simulation-evaluation)
+- No-code UI for product teams alongside powerful SDKs (Python, TypeScript, Java, Go)
+- Multi-turn conversation simulation with custom personas
+- Unified evaluation framework (AI, programmatic, statistical, human-in-the-loop)
+
+### Langfuse
+
+Langfuse is an open-source LLM engineering platform that helps teams collaboratively develop, monitor, evaluate, and debug AI applications. Built by developers for developers, Langfuse emphasizes transparency through open-source principles and offers robust self-hosting options alongside its cloud service.
+
+**Key Strengths:**
+- Fully open-source 
+- Strong observability and tracing with OpenTelemetry standards
+- Deep framework integrations (LangChain, LlamaIndex, OpenAI SDK)
+- Flexible self-hosting or cloud deployment
+
+## Core Features Comparison
+
+| Feature Category | Maxim AI | Langfuse |
+|-----------------|----------|----------|
+| **Agent Simulation** | ✅ Multi-turn conversations with personas | ⚠️ Limited (manual test creation) |
+| **Prompt Playground** | ✅ Playground++ with versioning & deployment | ✅ Interactive playground with prompt management |
+| **Observability** | ✅ Real-time distributed tracing | ✅ Comprehensive tracing with OpenTelemetry |
+| **Evaluation Types** | ✅ AI, programmatic, statistical, human | ✅ LLM-as-judge, user feedback, manual labeling |
+| **Dataset Management** | ✅ Synthetic + production data curation | ✅ Dataset creation from production traces |
+| **Custom Dashboards** | ✅ No-code dashboard builder | ⚠️ Limited (pre-built analytics) |
+| **Human Evaluations** | ✅ Managed human evaluation service | ✅ Manual labeling and annotation queue |
+| **Framework Support** | ✅ 15+ integrations | ✅ 50+ library/framework integrations |
+| **Self-Hosting** | ✅ Enterprise option | ✅ Full open-source self-hosting |
+| **Bifrost Gateway** | ✅ Unified LLM gateway included | ❌ No gateway (integrates with LiteLLM) |
+
+## Agent Evaluation Capabilities
+
+### Agent Tracing and Observability
+
+Both platforms excel at [agent tracing](https://www.getmaxim.ai/articles/agent-tracing-for-debugging-multi-agent-ai-systems/), but with different approaches:
+
+**Maxim AI:**
+- Provides session-level, trace-level, and span-level observability
+- Real-time alerts for production issues
+- Supports distributed tracing across multi-agent systems
+- Custom evaluation rules at any granularity level
+
+**Langfuse:**
+- Visualizes agent graphs to illustrate workflow execution
+- Agent-specific UI with tool call rendering and log view
+- Three evaluation levels: final response (black-box), trajectory (glass-box), and single step (white-box)
+- Cost and latency tracking per agent step
+
+### Multi-Turn Agent Testing
+
+**Maxim AI** stands out for [agent simulation](https://www.getmaxim.ai/products/agent-simulation-evaluation) capabilities:
+- Simulate thousands of scenarios with custom user personas
+- Test agents across goal-driven dialogue paths
+- Re-run simulations from any step to reproduce issues
+- Parallel execution across multiple prompt variations
+
+**Langfuse** offers:
+- Dataset-based offline evaluation
+- Manual trace inspection for debugging
+- Online evaluation through user feedback mechanisms
+- Support for multi-turn conversation tracking
+
+### Evaluation Methods
+
+Both platforms support comprehensive evaluation workflows, but with different strengths:
+
+**Maxim AI:**
+- [Pre-built evaluator store](https://www.getmaxim.ai/products/agent-simulation-evaluation) with custom evaluator creation
+- Configurable evaluations at session, trace, or span level
+- Managed human evaluation service on Enterprise plans
+- Integration with CI/CD pipelines via SDK/API
+
+**Langfuse:**
+- [LLM-as-a-judge evaluation templates](https://langfuse.com/docs/evaluation/overview)
+- User feedback collection (thumbs up/down)
+- Manual labeling through annotation queue
+- Experiment comparison with baseline/candidate analysis
+
+<a href="https://www.getmaxim.ai/demo" target="_blank" rel="noopener noreferrer">
+  <img
+    src="/images/Evaluation.png"
+    alt="Maxim vs Langfuse evaluation comparison"
+    style={{ borderRadius: '0.5rem', maxWidth: '100%', height: 'auto', margin: '1.5rem 0' }}
+  />
+</a>
+
+## Pricing Comparison
+
+### Maxim AI Pricing
+
+| Plan | Price | Key Features |
+|------|-------|--------------|
+| **Free** | $0 | 14-day trial, core evaluation features |
+| **Professional** | $29/seat/month | 4 default roles, prompt versioning, custom evaluators, online evaluations, email support |
+| **Business** | $49/seat/month | RBAC, higher rate limits, PII management, private Slack support |
+| **Enterprise** | Custom | Custom SSO, in-VPC deployment, managed human evaluation, dedicated customer success |
+
+**Pricing Model:** Seat-based pricing scales with team size, not usage volume.
+
+[Explore Maxim AI pricing](https://www.getmaxim.ai/pricing)
+
+### Langfuse Pricing
+
+| Plan | Price | Key Features |
+|------|-------|--------------|
+| **Hobby** | Free | 50k observations/month, unlimited users, 90-day retention |
+| **Pro** | $59/month | 100k observations/month, unlimited data retention |
+| **Team** | $499/month | Unlimited observations, high rate limits, all features |
+| **Enterprise** | Custom | Enterprise SSO, dedicated support, SLA commitments |
+
+**Pricing Model:** Usage-based pricing based on observations (events tracked).
+
+[View Langfuse pricing](https://langfuse.com/pricing)
+
+### Cost Analysis
+
+**For Small Teams (2-5 people):**
+- **Maxim AI:** $58-145/month (Professional plan)
+- **Langfuse:** Free-$59/month (depending on usage)
+
+**For Growing Teams (10+ people):**
+- **Maxim AI:** $290-490/month (Professional to Business)
+- **Langfuse:** $499/month+ (Team or Enterprise for unlimited usage)
+
+**Key Difference:** Maxim's seat-based pricing is predictable and scales with team size, while Langfuse's usage-based model can be more cost-effective for small teams with high observation volumes or more expensive for high-traffic applications.
+
+## Integration & Framework Support
+
+### Maxim AI Integrations
+
+Maxim AI supports [15+ popular frameworks](https://www.getmaxim.ai/docs/introduction/overview):
+- **Agent Frameworks:** LangChain, LangGraph, OpenAI Agents, Crew AI, Agno
+- **LLM Providers:** OpenAI, Anthropic, AWS Bedrock, Mistral
+- **Gateways:** LiteLLM, LiteLLM Proxy, Bifrost (native)
+- **Conversation AI:** LiveKit
+
+### Langfuse Integrations
+
+Langfuse offers [50+ integrations](https://langfuse.com/docs) across:
+- **Frameworks:** LangChain, LlamaIndex, Haystack, CrewAI, Dify, Flowise, Langflow
+- **LLM SDKs:** OpenAI SDK, Anthropic, Azure OpenAI, Vertex AI, AWS Bedrock
+- **Instrumentation:** OpenTelemetry, LiteLLM, Vercel AI SDK
+- **Agent Platforms:** Microsoft Agent Framework, Amazon Bedrock AgentCore
+
+Both platforms provide:
+- Python and JavaScript/TypeScript SDKs
+- REST API access
+- Automated instrumentation via drop-in replacements
+
+
+**Ready to evaluate AI agents at scale?** [Book a demo with Maxim AI](https://www.getmaxim.ai/demo) or explore our [comprehensive documentation](https://www.getmaxim.ai/docs/introduction/overview) to get started.
+
+---
+
+**Related Resources:**
+- [AI Agent Evaluation Metrics: A Complete Guide](https://www.getmaxim.ai/blog/ai-agent-evaluation-metrics/)
+- [Agent Evaluation vs Model Evaluation: What's the Difference?](https://www.getmaxim.ai/articles/agent-evaluation-vs-model-evaluation-whats-the-difference-and-why-it-matters/)
+- [Prompt Management in 2025: Organize, Test, and Optimize AI Prompts](https://www.getmaxim.ai/articles/prompt-management-in-2025-how-to-organize-test-and-optimize-your-ai-prompts/)
+- [LLM Observability: How to Monitor Large Language Models in Production](https://www.getmaxim.ai/articles/llm-observability-how-to-monitor-large-language-models-in-production/)
+
+<a href="https://www.getmaxim.ai/demo" target="_blank" rel="noopener noreferrer">
+  <img
+    src="/images/Evaluation.png"
+    alt="Maxim vs Langfuse evaluation comparison"
+    style={{ borderRadius: '0.5rem', maxWidth: '100%', height: 'auto', margin: '1.5rem 0' }}
+  />
+</a>

@@ -1,0 +1,256 @@
+---
+title: "Best Agent Debugging Platform: Maxim vs Langsmith"
+description: "Choosing between Maxim and Langsmith for agent debugging depends on your team's needs. **Maxim** offers an end-to-end platform with simulation, evaluation, and observability built for cross-functional collaboration, making it ideal for teams that need comprehensive agent quality assurance from development through production. **Langsmith** provides strong tracing and monitoring capabilities tightly integrated with the LangChain ecosystem, best suited for teams already invested in LangChain/LangGraph frameworks."
+---
+
+<a href="https://www.getmaxim.ai/demo" target="_blank" rel="noopener noreferrer">
+  <img
+    src="/images/Observability.png"
+    alt="Maxim vs Langsmith agent observability comparison"
+    style={{ borderRadius: '0.5rem', maxWidth: '100%', height: 'auto', margin: '1.5rem 0' }}
+  />
+</a>
+
+## Table of Contents
+
+- [Platform Overview](#platform-overview)
+- [Core Debugging Features](#core-debugging-features)
+- [Prompt Versioning and Management](#prompt-versioning-and-management)
+- [Agent Observability Capabilities](#agent-observability-capabilities)
+- [Evaluation and Testing](#evaluation-and-testing)
+- [Pricing Comparison](#pricing-comparison)
+- [Integration and Ease of Use](#integration-and-ease-of-use)
+- [Which Platform Should You Choose?](#which-platform-should-you-choose)
+
+## Platform Overview
+
+### Maxim AI
+
+[Maxim](https://www.getmaxim.ai/) is an end-to-end AI evaluation and observability platform designed for modern AI teams to ship agents with quality, reliability, and speed. It covers the entire AI lifecycle from experimentation and simulation to production monitoring.
+
+**Key Strengths:**
+- Full-stack platform for multimodal agents
+- Cross-functional collaboration between engineering and product teams
+- Framework-agnostic design (works with any LLM framework)
+- Built-in agent simulation capabilities
+- Advanced prompt management with [Playground++](https://www.getmaxim.ai/products/experimentation)
+
+### Langsmith
+
+Langsmith is the official observability, testing, and evaluation platform for LangChain-powered applications. It provides visibility into agent execution, trace tracking, and prompt management.
+
+**Key Strengths:**
+- Deep integration with LangChain and LangGraph
+- Polly AI assistant for agent debugging
+- LangSmith Studio for agent visualization
+- Strong community support within the LangChain ecosystem
+- LangSmith Fetch CLI for coding agents
+
+## Core Debugging Features
+
+| Feature | Maxim | Langsmith |
+|---------|-------|-----------|
+| **Distributed Tracing** | Sessions, traces, spans with multi-turn support | Runs, traces, threads with nested structure |
+| **Real-time Debugging** | Live dashboards with custom views | Real-time monitoring with alerts |
+| **AI-Powered Analysis** | Built-in evaluators and simulation | Polly AI assistant for trace analysis |
+| **Step-by-Step Visibility** | LLM calls, tool usage, database queries, context retrieval | LLM calls, tool executions, model invocations |
+| **Multi-Agent Support** | Native multi-agent and multimodal workflow tracing | Supported through LangGraph integration |
+
+### Agent Tracing
+
+Both platforms provide comprehensive [agent tracing](https://www.getmaxim.ai/articles/agent-tracing-for-debugging-multi-agent-ai-systems/) capabilities, but with different approaches:
+
+**Maxim's Approach:**
+- **Sessions:** Track entire multi-turn conversations end-to-end
+- **Traces:** Capture individual request-response interactions within sessions
+- **Spans:** Break down traces into specific steps (LLM calls, tool usage, database queries)
+- **Events:** Granular logging for custom debugging points
+
+**Langsmith's Approach:**
+- **Threads:** Full conversation between user and application
+- **Traces:** Single execution of your agent
+- **Runs:** Individual steps including LLM calls and tool executions
+- **Base Traces (14-day retention)** vs **Extended Traces (400-day retention)**
+
+## Prompt Versioning and Management
+
+[Prompt versioning](https://www.getmaxim.ai/articles/prompt-management-in-2025-how-to-organize-test-and-optimize-your-ai-prompts/) is critical for maintaining and improving agent reliability. Here's how each platform handles it:
+
+### Maxim's Prompt Management
+
+**Playground++** provides:
+- **Version Control:** Organize and version prompts directly from the UI
+- **A/B Testing:** Compare output quality, cost, and latency across prompt variations
+- **Deployment Variables:** Deploy prompts with different configurations without code changes
+- **Collaboration:** No-code interface for product teams to iterate on prompts
+- **Tool Integration:** Connect with databases, RAG pipelines, and custom tools seamlessly
+
+**Best for:** Teams needing systematic prompt experimentation with cross-functional collaboration
+
+### Langsmith's Prompt Management
+
+**Prompt Canvas** offers:
+- **UI-Based Editing:** Non-technical teammates can recommend prompt improvements
+- **Playground Testing:** Experiment with models and prompts side-by-side
+- **Version Tracking:** Monitor prompt performance and response accuracy over time
+- **LangChain Integration:** Seamless integration with LangChain prompt templates
+
+**Best for:** Teams primarily using LangChain who want tight integration with their existing workflow
+
+## Agent Observability Capabilities
+
+[Agent observability](https://www.getmaxim.ai/products/agent-observability) ensures you can monitor and debug agents in production effectively.
+
+### Maxim Observability Features
+
+**Production Monitoring:**
+- Custom dashboards for tracking agent behavior across dimensions
+- Real-time alerts via Slack, PagerDuty, or OpsGenie
+- Threshold-based monitoring for latency, cost, and quality metrics
+- Saved views for repeatable debugging workflows
+- OTLP ingestion and forwarding to external collectors (Snowflake, New Relic)
+
+**Data Retention:**
+- Developer plan: 3 days
+- Professional plan: 7 days
+- Business plan: 30 days
+- Enterprise plan: Custom retention
+
+<a href="https://www.getmaxim.ai/demo" target="_blank" rel="noopener noreferrer">
+  <img
+    src="/images/Observability.png"
+    alt="Maxim vs Langsmith agent observability comparison"
+    style={{ borderRadius: '0.5rem', maxWidth: '100%', height: 'auto', margin: '1.5rem 0' }}
+  />
+</a>
+
+### Langsmith Observability Features
+
+**Production Monitoring:**
+- Live dashboards for costs, latency, and response quality
+- Automated alerts when issues occur
+- Clustering of similar conversations for pattern detection
+- Integration with LangSmith Studio for visual debugging
+
+**Data Retention:**
+- Base traces: 14 days (short-term debugging)
+- Extended traces: 400 days (long-term analysis and compliance)
+- Automatic upgrade to extended traces when receiving feedback
+
+## Evaluation and Testing
+
+Testing agents before production is crucial for [AI reliability](https://www.getmaxim.ai/articles/ai-reliability-how-to-build-trustworthy-ai-systems/).
+
+| Capability | Maxim | Langsmith |
+|------------|-------|-----------|
+| **Pre-Production Testing** | AI-powered simulation across scenarios and personas | Dataset-based evaluation with LLM-as-Judge |
+| **Evaluation Types** | AI, programmatic, statistical, and human evaluators | LLM-as-Judge evaluators with human feedback collection |
+| **Granularity** | Session, trace, or span level | Trace level with annotation queues |
+| **Human Evaluation** | Built-in human review workflows | Pairwise annotation queues for comparing outputs |
+| **Simulation** | Test agents across thousands of scenarios | Limited to dataset-based testing |
+
+### Maxim's Testing Approach
+
+[Agent simulation](https://www.getmaxim.ai/products/agent-simulation-evaluation) enables:
+- Simulating customer interactions across real-world scenarios and user personas
+- Evaluating agents at a conversational level (task completion, trajectory analysis)
+- Re-running simulations from any step to reproduce and debug issues
+- Library of pre-built evaluators with support for custom evaluators
+- Multi-modal dataset support with easy import/export
+
+### Langsmith's Testing Approach
+
+**Evaluation workflow:**
+- Save production traces to datasets for evaluation
+- Score performance with LLM-as-Judge evaluators
+- Gather feedback from subject-matter experts
+- Pairwise annotation queues for subjective comparison
+- Automated testing on LLM-based applications
+
+## Pricing Comparison
+
+### Maxim Pricing
+
+| Plan | Price | Key Features | Best For |
+|------|-------|--------------|----------|
+| **Developer** | Free | 3 seats, 10k logs/month, 3-day retention | Individual developers, small projects |
+| **Professional** | $29/seat/month | Unlimited seats, 100k logs/month, 7-day retention, prompt versioning | Growing teams |
+| **Business** | $49/seat/month | 1M logs/month, 30-day retention, RBAC, simulations | Businesses needing scale |
+| **Enterprise** | Custom | In-VPC, SSO, custom limits, premium support | Large organizations |
+
+All plans include a **14-day free trial** with no credit card required.
+
+[View detailed pricing](https://www.getmaxim.ai/pricing)
+
+### Langsmith Pricing
+
+| Plan | Price | Key Features | Best For |
+|------|-------|--------------|----------|
+| **Developer** | Free | 5k base traces/month | Hobbyists, individual developers |
+| **Plus** | Custom (seats-based) | 10k base traces/month, up to 10 seats, 1 free dev deployment | Small teams |
+| **Enterprise** | Custom | Unlimited seats, advanced security, self-hosting options | Large organizations |
+
+**Trace Pricing:**
+- Base traces (14-day retention): Starting at $0.50 per 1k traces after free tier
+- Extended traces (400-day retention): Higher pricing for long-term storage
+
+**Startup Plan:** Available with discounted rates for 1 year (must apply)
+
+## Integration and Ease of Use
+
+### Maxim Integration
+
+**Framework Support:**
+- Works with any LLM framework (framework-agnostic)
+- Native integrations: [LangChain](https://docs.getmaxim.ai/libraries/langchain), [LangGraph](https://docs.getmaxim.ai/libraries/langgraph), [OpenAI](https://docs.getmaxim.ai/libraries/openai), [Anthropic](https://docs.getmaxim.ai/libraries/anthropic), [Crew AI](https://docs.getmaxim.ai/libraries/crewai), [LiteLLM](https://docs.getmaxim.ai/libraries/litellm)
+- [Bifrost gateway](https://docs.getbifrost.ai/) for unified access to 12+ providers
+
+**Developer Experience:**
+- SDKs in Python, TypeScript, Java, and Go
+- No-code UI for product managers and non-technical stakeholders
+- Bidirectional sync between code and UI changes
+- Comprehensive [documentation](https://docs.getmaxim.ai/)
+
+### Langsmith Integration
+
+**Framework Support:**
+- Optimized for LangChain and LangGraph
+- Works with other frameworks via manual instrumentation
+- One environment variable setup for LangChain users
+
+**Developer Experience:**
+- LangSmith Studio for visual agent debugging
+- LangSmith Fetch CLI for terminal-based workflows
+- Polly AI assistant for analyzing deep agent behavior
+- Integration with coding agents (Claude Code, DeepAgents CLI)
+
+
+## Frequently Asked Questions
+
+**Q: Can I use Maxim without LangChain?**  
+Yes, Maxim is framework-agnostic and works with any LLM framework including OpenAI, Anthropic, Cohere, and custom implementations.
+
+**Q: Does Langsmith work with non-LangChain applications?**  
+Yes, but it requires manual instrumentation. The platform is optimized for LangChain users.
+
+**Q: Which platform is better for multi-agent systems?**  
+Maxim provides native support for multi-agent workflows with session-level observability and cross-agent tracing. Langsmith supports multi-agent systems through LangGraph integration.
+
+**Q: How do the pricing models compare?**  
+Maxim uses per-seat pricing with generous log limits. Langsmith uses a combination of seat pricing and per-trace usage pricing, which can scale costs with high-volume applications.
+
+## Final Thoughts
+
+Both Maxim and Langsmith are powerful [agent debugging platforms](https://www.getmaxim.ai/articles/llm-observability-how-to-monitor-large-language-models-in-production/), but they serve different team needs. Maxim excels as a comprehensive, framework-agnostic platform that enables cross-functional collaboration and provides end-to-end coverage of the AI lifecycle. Langsmith shines for teams deeply embedded in the LangChain ecosystem who value tight integration and long-term trace retention.
+
+For teams serious about [AI agent quality](https://www.getmaxim.ai/blog/ai-agent-quality-evaluation/) and reliability, the choice often comes down to whether you need a full-stack platform (Maxim) or a LangChain-optimized solution (Langsmith).
+
+Ready to debug your agents with confidence? [Book a demo with Maxim](https://www.getmaxim.ai/demo) or explore our [comprehensive documentation](https://docs.getmaxim.ai/) to get started.
+
+<a href="https://www.getmaxim.ai/demo" target="_blank" rel="noopener noreferrer">
+  <img
+    src="/images/Observability.png"
+    alt="Maxim vs Langsmith agent observability comparison"
+    style={{ borderRadius: '0.5rem', maxWidth: '100%', height: 'auto', margin: '1.5rem 0' }}
+  />
+</a>
