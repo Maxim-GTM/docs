@@ -4,6 +4,19 @@
         if (document.getElementById('custom-footer')) {
             return;
         }
+        // Run immediately on page load to pre-clean any modals
+    closeImageModals();
+    
+    // Also run before page becomes visible
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            // Pre-emptively close when leaving the page
+            closeImageModals();
+        } else {
+            // And again when returning
+            closeImageModals();
+        }
+    });
 
         // Compliance logo CDN URLs
         const socPath = 'https://cdn.prod.website-files.com/665ab0daac869acad030a349/66fe99bae027e906828812ed_21972-312_SOC_NonCPA.png';
@@ -124,5 +137,48 @@
     } else {
         injectFooter();
     }
-})();
+   
+// Stable version - prevents flickering
+// Prevent multiple runs - only close modals once per tab return
+var isClosing = false;
+    
+// Instant modal closer - no delays
+function closeImageModals() {
+    // Click ALL unzoom buttons immediately
+    var unzoomBtns = document.querySelectorAll('button[data-rmiz-btn-unzoom]');
+    unzoomBtns.forEach(function(btn) {
+        try { btn.click(); } catch(e) {}
+    });
+    
+    // Immediate cleanup - no setTimeout
+    document.querySelectorAll('[data-rmiz-portal]').forEach(function(portal) {
+        if (!portal.closest('.strip-wrapper, .section-footer, #custom-footer')) {
+            portal.remove();
+        }
+    });
+    
+    document.querySelectorAll('dialog[data-rmiz-modal][open]').forEach(function(d) {
+        if (!d.closest('.strip-wrapper, .section-footer, #custom-footer')) {
+            d.removeAttribute('open');
+            if (d.close) d.close();
+        }
+    });
+    
+    document.querySelectorAll('[data-rmiz-modal-overlay="visible"]').forEach(function(overlay) {
+        if (!overlay.closest('.strip-wrapper, .section-footer, #custom-footer')) {
+            overlay.setAttribute('data-rmiz-modal-overlay', 'hidden');
+        }
+    });
+}
 
+// Trigger immediately on tab return
+document.addEventListener('visibilitychange', function() {
+    if (!document.hidden) {
+        closeImageModals();
+    }
+});
+
+window.addEventListener('focus', function() {
+    closeImageModals();
+});
+})();

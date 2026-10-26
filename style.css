@@ -715,3 +715,108 @@ article img {
 .glossary-mdx-content li {
     white-space: normal;
 }
+
+/* Ensure ALL 3 CTAs are always visible and clickable */
+.strip-wrapper,
+.strip-wrapper *,
+.section-footer,
+.section-footer *,
+#custom-footer,
+#custom-footer * {
+    pointer-events: auto !important;
+}
+
+/* Force all CTA containers to be visible */
+.strip-wrapper.ptblr {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Prevent any modal dialogs inside CTAs from being hidden */
+/* Fix zero-height CTA container - catch ALL CTAs */
+.strip-wrapper,
+.strip-box,
+.strip-right,
+.strip-left,
+section.section-footer,
+.section-footer,
+#custom-footer {
+    min-height: auto !important;
+    height: auto !important;
+}
+
+/* Force ALL CTA images to be visible */
+/* Force ONLY CTA images to be visible - not compliance badges */
+.strip-right img,
+.strip-right-img {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    min-height: 100px !important;
+    height: auto !important;
+    width: auto !important;
+    max-width: 100% !important;
+}
+
+/* Keep compliance badges at their correct size */
+.compliance-logo {
+    min-height: auto !important;
+    height: auto !important;
+    width: 45px !important;
+    max-width: 45px !important;
+}
+
+/* Keep footer logo at correct size */
+.footer-logo {
+    min-height: auto !important;
+    max-width: 150px !important;
+}
+
+/* Ensure CTAs are clickable */
+/* CRITICAL: Ensure CTAs are always on top and clickable */
+.strip-wrapper,
+.section-footer,
+#custom-footer {
+    position: relative !important;
+    z-index: 9999 !important;
+    pointer-events: auto !important;
+}
+
+.strip-wrapper *,
+.section-footer *,
+#custom-footer * {
+    pointer-events: auto !important;
+}
+
+/* Prevent any modal overlay from blocking CTAs */
+[data-rmiz-portal] {
+    pointer-events: none !important;
+}
+
+[data-rmiz-modal-overlay] {
+    pointer-events: none !important;
+}
+/* Instantly hide open modals - no blink */
+dialog[data-rmiz-modal][open] {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: none !important;
+}
+
+[data-rmiz-modal-overlay="visible"] {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: none !important;
+}
+
+/* But keep CTA sections always visible */
+.strip-wrapper,
+.strip-wrapper *,
+.section-footer,
+.section-footer *,
+#custom-footer,
+#custom-footer * {
+    opacity: 1 !important;
+    visibility: visible !important;
+}

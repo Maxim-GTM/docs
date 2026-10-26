@@ -1,0 +1,289 @@
+---
+title: "Best AI Agent Evals Platform: Maxim vs Galileo"
+description: "Both Maxim and Galileo offer robust AI agent evaluation platforms, but they differ in scope and approach. **Maxim** provides an end-to-end platform covering experimentation, simulation, evaluation, and observability with strong cross-functional collaboration features. **Galileo** focuses on evaluation foundation models (EFMs) and real-time guardrails powered by their Luna-2 small language models. Choose Maxim for comprehensive lifecycle management and team collaboration, or Galileo for cost-effective production monitoring."
+---
+
+<a href="https://www.getmaxim.ai/demo" target="_blank" rel="noopener noreferrer">
+  <img
+    src="/images/Evaluation.png"
+    alt="Maxim vs Arize evaluation comparison"
+    style={{ borderRadius: '0.5rem', maxWidth: '100%', height: 'auto', margin: '1.5rem 0' }}
+  />
+</a>
+
+## Table of Contents
+
+1. [Platform Overview](#platform-overview)
+2. [Key Features Comparison](#key-features-comparison)
+3. [Pricing Comparison](#pricing-comparison)
+4. [Evaluation Capabilities](#evaluation-capabilities)
+5. [Agent Testing & Simulation](#agent-testing-simulation)
+6. [Observability & Monitoring](#observability-monitoring)
+7. [Integration & Developer Experience](#integration-developer-experience)
+8. [Use Cases & Best Fit](#use-cases-best-fit)
+9. [Verdict](#verdict)
+
+---
+
+## Platform Overview
+
+### Maxim AI
+[Maxim](https://www.getmaxim.ai/) is an end-to-end AI simulation, evaluation, and observability platform designed for cross-functional teams building production-grade AI agents. The platform covers the complete AI lifecycle from prompt engineering to production monitoring.
+
+**Core Focus:**
+- Full-stack evaluation and observability
+- Cross-functional collaboration (Engineering + Product)
+- Multi-turn agent simulation at scale
+- Unified experimentation and deployment
+
+### Galileo AI
+Galileo positions itself as an AI reliability platform powered by Evaluation Foundation Models (EFMs). Their recent [Agentic Evaluations](https://venturebeat.com/ai/galileo-launches-agentic-evaluations-to-fix-ai-agent-errors-before-they-cost-you) launch focuses on system-level and step-by-step agent performance measurement.
+
+**Core Focus:**
+- Evaluation foundation models (Luna-2 SLMs)
+- Real-time guardrails and protection
+- Research-backed evaluation metrics
+- Cost-effective production monitoring (97% cost reduction vs GPT-4)
+
+---
+
+## Key Features Comparison
+
+| Feature | Maxim | Galileo |
+|---------|-------|---------|
+| **Agent Simulation** | ✅ Multi-turn, persona-based scenarios | ⚠️ Limited simulation capabilities |
+| **Prompt Playground** | ✅ Advanced Playground++ with versioning | ✅ Basic prompt testing |
+| **Custom Evaluators** | ✅ AI, programmatic, statistical, human | ✅ AI-based, proprietary metrics |
+| **Real-time Observability** | ✅ Distributed tracing, live debugging | ✅ Production monitoring with Luna-2 |
+| **LLM Gateway** | ✅ Bifrost included | ❌ Not included |
+| **Data Management** | ✅ Synthetic generation, multimodal support | ✅ Dataset creation from production data |
+| **Human Evaluations** | ✅ Built-in workflows | ✅ SME annotations supported |
+| **Cross-functional UI** | ✅ No-code for Product teams | ⚠️ Primarily engineering-focused |
+
+---
+
+## Pricing Comparison
+
+### Maxim Pricing
+
+| Plan | Price | Key Features |
+|------|-------|-------------|
+| **Free Trial** | $0 (14 days) | Full platform access, no credit card |
+| **Professional** | $29/seat/month | 4 default roles, prompt versioning, custom evaluators, email support |
+| **Business** | $49/seat/month | RBAC, higher rate limits, PII management, private Slack |
+| **Enterprise** | Custom | SSO, in-VPC deployment, Maxim-managed human evals, dedicated CSM |
+
+**Pricing Model:** Per-seat pricing
+**[View Full Pricing](https://www.getmaxim.ai/pricing)**
+
+### Galileo Pricing
+
+| Plan | Price | Key Features |
+|------|-------|-------------|
+| **Free** | $0 | 5,000 traces/month, unlimited users, unlimited custom evals |
+| **Pro** | $100/month* | 50,000 traces/month, standard RBAC, Slack support |
+| **Enterprise** | Custom | Unlimited traces, VPC/on-prem deployment, 24/7 support, dedicated inference servers |
+
+**Pricing Model:** Usage-based (scales with traces)
+*Pricing scales based on trace volume
+
+---
+
+## Evaluation Capabilities
+
+### Maxim's Evaluation Approach
+
+Maxim offers a **unified evaluation framework** supporting multiple evaluation types:
+
+**Evaluator Types:**
+- **AI-based evaluators:** LLM-as-a-judge for semantic quality
+- **Programmatic evaluators:** Rule-based validation for structure and format
+- **Statistical evaluators:** Quantitative metrics for performance analysis
+- **Human evaluators:** SME review workflows for nuanced assessment
+
+**Evaluation Levels:**
+- Session-level evaluation (entire conversation quality)
+- Trace-level evaluation (individual request-response quality)
+- Span-level evaluation (component-specific metrics)
+
+**Key Differentiators:**
+- Pre-built [evaluator store](https://www.getmaxim.ai/docs/introduction/overview) with customization options
+- Flexible evaluation at any granularity level
+- Visual comparison across prompt versions
+- Dataset curation from evaluation results
+
+Learn more: [What Are AI Evals?](https://www.getmaxim.ai/articles/what-are-ai-evals/)
+
+<a href="https://www.getmaxim.ai/demo" target="_blank" rel="noopener noreferrer">
+  <img
+    src="/images/Evaluation.png"
+    alt="Maxim vs Arize evaluation comparison"
+    style={{ borderRadius: '0.5rem', maxWidth: '100%', height: 'auto', margin: '1.5rem 0' }}
+  />
+</a>
+### Galileo's Evaluation Approach
+
+Galileo's evaluation is powered by **Luna-2 Evaluation Foundation Models (EFMs)**:
+
+**Agent-Specific Metrics:**
+- LLM Planner assessment (tool selection quality)
+- Tool call error detection
+- Overall session success measurement
+- Cost and latency tracking per session
+
+**Key Differentiators:**
+- Research-backed proprietary metrics
+- Auto-tuned metrics from live feedback
+- Offline evals converted to production guardrails
+
+**Evaluation Coverage:**
+- 20+ out-of-box evaluators for RAG, agents, safety, security
+- Custom evaluator creation
+
+
+---
+
+## Agent Testing & Simulation
+
+### Maxim: Comprehensive Agent Simulation
+
+Maxim excels in **large-scale agent testing** with simulation capabilities:
+
+**Simulation Features:**
+- Multi-turn conversation simulation with custom personas
+- Goal-driven dialogue path testing
+- Parallel testing across thousands of scenarios
+- Step-by-step agent trajectory analysis
+
+**Use Cases:**
+- Test agent behavior across diverse user intents
+- Reproduce production issues from any conversation step
+- Evaluate task completion rates across personas
+- Identify failure points before deployment
+
+**Developer Experience:**
+- No-code simulation setup from UI
+- SDK integration for CI/CD pipelines
+- Automated regression testing
+- Performance benchmarking
+
+Read more: [Agent Simulation & Evaluation](https://www.getmaxim.ai/products/agent-simulation-evaluation)
+
+### Galileo: Step-by-Step Agent Analysis
+
+Galileo's Agentic Evaluations provides end-to-end visibility into agent workflows:
+
+**Analysis Features:**
+- Complete workflow tracing (input to final action)
+- Multi-step agent completion visualization
+- Tool selection and execution analysis
+- Session-level performance metrics
+
+**Capabilities:**
+- System-level evaluation
+- Step-by-step evaluation
+- Error pinpointing across agent steps
+- Path optimization recommendations
+
+---
+
+## Observability & Monitoring
+
+### Maxim: Production-Grade Observability
+
+Maxim's [observability suite](https://www.getmaxim.ai/products/agent-observability) offers real-time monitoring:
+
+**Monitoring Features:**
+- Distributed tracing for multi-agent systems
+- Live issue tracking and debugging
+- Automated quality checks with custom rules
+- Real-time alerts for production anomalies
+
+**Data Management:**
+- Multiple repositories for different applications
+- Production log analysis
+- Dataset curation from production data
+- PII detection and management (Business+)
+
+**Analytics:**
+- Custom dashboards for agent behavior insights
+- Performance tracking across dimensions
+- Cost and latency optimization
+- User satisfaction metrics
+
+Learn more: [LLM Observability in Production](https://www.getmaxim.ai/articles/llm-observability-how-to-monitor-large-language-models-in-production/)
+
+### Galileo: Luna-2 Powered Monitoring
+
+Galileo's observability leverages **Luna-2 small language models**:
+
+**Monitoring Capabilities:**
+- Real-time guardrails at 97% lower cost
+- Continuous evaluation of 100% traffic
+- Drift detection and alerts
+- Performance anomaly identification
+
+**Enterprise Features:**
+- Low-latency dedicated inference servers
+- VPC and on-prem deployment options
+- Forward-deployed engineering support
+- Enterprise-grade RBAC and SSO
+
+---
+
+## Integration & Developer Experience
+
+### Maxim Integrations
+
+**Supported Frameworks:**
+- LangChain & LangGraph
+- OpenAI & OpenAI Agents
+- Anthropic (Claude)
+- AWS Bedrock
+- CrewAI
+- Agno
+- LiteLLM & LiteLLM Proxy
+- LiveKit
+
+**SDKs:**
+- Python, TypeScript, Java, Go
+- REST API for custom integrations
+- CI/CD pipeline integration
+
+**Developer Tools:**
+- [Bifrost LLM Gateway](https://docs.getbifrost.ai/) (unified API for 12+ providers)
+- Prompt versioning and deployment
+- No-code evaluation setup
+
+### Galileo Integrations
+
+**Partner Ecosystem:**
+- NVIDIA NeMo integration
+- MongoDB Atlas integration
+- Elastic vector database
+- CrewAI partnership
+- ServiceNow integration
+
+**Platform Access:**
+- Free tier with 5,000 traces/month
+- Unlimited users on free plan
+- Enterprise deployment options
+
+---
+
+### Technical Deep Dives
+- [Agent Tracing for Multi-Agent Systems](https://www.getmaxim.ai/articles/agent-tracing-for-debugging-multi-agent-ai-systems/)
+- [AI Reliability Strategies](https://www.getmaxim.ai/articles/ai-reliability-how-to-build-trustworthy-ai-systems/)
+- [Prompt Management in 2025](https://www.getmaxim.ai/articles/prompt-management-in-2025-how-to-organize-test-and-optimize-your-ai-prompts/)
+
+---
+
+**Ready to evaluate your AI agents?** [Book a demo with Maxim](https://www.getmaxim.ai/demo) or explore our [documentation](https://www.getmaxim.ai/docs/introduction/overview) to get started.
+
+<a href="https://www.getmaxim.ai/demo" target="_blank" rel="noopener noreferrer">
+  <img
+    src="/images/Evaluation.png"
+    alt="Maxim vs Arize evaluation comparison"
+    style={{ borderRadius: '0.5rem', maxWidth: '100%', height: 'auto', margin: '1.5rem 0' }}
+  />
+</a>
